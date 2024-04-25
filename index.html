@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: antiquewhite;
+        }
+
+        .parent-card {
+            margin: 5px 0;
+            text-transform: uppercase;
+            border-radius: 10px;
+            width: 30%;
+            height: 336px;
+            background-color: burlywood;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card-img {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            width: 100%;
+            height: 200px;
+            background-image: url(free-photo-of-a-narrow-alley-with-buildings-and-a-street-sign.jpeg);
+            background-size: 100% 100%;
+        }
+
+        .card-btn {
+            width: 80%;
+            height: 27px;
+            border-radius: 5px;
+            border: none;
+            margin-top: 5px;
+            text-transform: uppercase;
+            background-color: rgb(24, 24, 220);
+            color: whitesmoke;
+            cursor: pointer;
+            transition-property: transform;
+            transition-duration: 0.7s;
+            transition-timing-function: ease-in;
+        }
+
+        .card-btn:hover {
+            transform: scaleY(1.2);
+            background-color: rgb(19, 19, 196);
+            border: 1px solid white;
+        }
+
+        .name {
+            margin: 6px 0;
+        }
+
+        .container {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+        .card-maker {
+            text-transform: uppercase;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 5px;
+            color: rgb(228, 153, 56);
+        }
+
+        .icon {
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .d-none {
+            display: none;
+        }
+
+        .card-maker-input {
+            width: 50%;
+            padding: 3px 5px;
+        }
+
+        .card-maker-input-btn {
+            width: 50%;
+            height: 27px;
+            border-radius: 5px;
+            border: none;
+            margin-top: 5px;
+            text-transform: uppercase;
+            background-color: rgb(24, 24, 220);
+            color: whitesmoke;
+            cursor: pointer;
+            transition-property: transform;
+            transition-duration: 0.7s;
+            transition-timing-function: ease-in;
+
+        }
+
+        .card-maker-input-btn:hover {
+            transform: scaleY(1.2);
+            background-color: rgb(19, 19, 196);
+            border: 1px solid white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="scroll" class="icon" onclick="clk()"><img src="download.png" alt="" width="50px" height="30px" border="2">
+    </div>
+
+    <div class="d-none" id="hide">
+        <h1>make your card</h1>
+        <br>
+        <input type="text" class="card-maker-input" placeholder="ENTER NAME" id="userName">
+        <br>
+        <input type="text" class="card-maker-input" placeholder="ENTER PROFESSION" id="userProfession">
+        <br>
+        <input type="text" class="card-maker-input" placeholder="ENTER PROFILE URL" id="userProfile">
+        <br>
+
+        <button class="card-maker-input-btn" onclick="cardMaker()">add</button>
+    </div>
+
+    <div class="container" id="container">
+
+        <div class="parent-card">
+            <img class="card-img"></img>
+            <div class="name">
+                <h1>name</h1>
+            </div>
+            <div class="name">
+                <h2>profession</h2>
+            </div>
+            <button class="card-btn">review profile</button>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
