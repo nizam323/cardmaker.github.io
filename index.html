@@ -80,7 +80,7 @@
         }
 
         .icon {
-            margin-bottom: 5px;
+            margin: 5px 0;
             display: flex;
             justify-content: center;
         }
@@ -92,6 +92,8 @@
         .card-maker-input {
             width: 50%;
             padding: 3px 5px;
+            border-radius: 5px;
+            border: ridge;
         }
 
         .card-maker-input-btn {
@@ -115,6 +117,36 @@
             background-color: rgb(19, 19, 196);
             border: 1px solid white;
         }
+
+        .h1{
+            text-align: center;
+        }
+
+        @media only screen and (max-width:480px) {
+            .parent-card{
+                width: 96%;
+            }
+        }
+        @media only screen and (min-width:481px) {
+            .parent-card{
+                width: 47%;
+            }
+        }
+        @media only screen and (min-width:750px) {
+            .parent-card{
+                width: 32%;
+            }
+        }
+        @media only screen and (min-width:1440px) {
+            .parent-card{
+                width: 23%;
+            }
+        }
+        @media only screen and (min-width:2560px) {
+            .parent-card{
+                width: 17%;
+            }
+        }
     </style>
 </head>
 
@@ -123,7 +155,7 @@
     </div>
 
     <div class="d-none" id="hide">
-        <h1>make your card</h1>
+        <h1 class="h1">make your card</h1>
         <br>
         <input type="text" class="card-maker-input" placeholder="ENTER NAME" id="userName">
         <br>

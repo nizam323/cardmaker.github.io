@@ -17,7 +17,7 @@ let userNameInput = document.getElementById("userName").value;
 let userProfessionInput = document.getElementById("userProfession").value;
 let userProfileInput = document.getElementById("userProfile").value;
 
-if(userNameInput&&userProfessionInput&&userProfileInput){
+if(userNameInput&&userProfessionInput&&userProfileInput){       
 // create elements
 
 let parentCard = document.createElement("div"); //.parent-card
@@ -52,12 +52,12 @@ parentCard.appendChild(cardBtn);
 
 
 document.getElementById("userName").value = "";
-document.getElementById("userProfession").value = "";
+document.getElementById("userProfession").value = "";     
 document.getElementById("userProfile").value = "";
 
-}else{
-    window.alert("PLEASE FILL ALL THE FIELDS")
-}
+}else{     
+    window.alert("PLEASE FILL ALL THE FIELDS") ;
+}      
 
 // auto card generating process
 
