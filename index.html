@@ -147,6 +147,18 @@
                 width: 17%;
             }
         }
+
+        .error{
+            width: 50%;
+            padding: 3px 5px;
+            border-radius: 5px;
+            border: 2px solid red;
+            margin-bottom: 13px;
+            text-align: center;
+            background-color: rgb(241, 88, 118);
+            color: white;
+            display: none;
+        }
     </style>
 </head>
 
@@ -158,10 +170,13 @@
         <h1 class="h1">make your card</h1>
         <br>
         <input type="text" class="card-maker-input" placeholder="ENTER NAME" id="userName">
+        <div class="error" id="nameError">please fill name input</div>
         <br>
         <input type="text" class="card-maker-input" placeholder="ENTER PROFESSION" id="userProfession">
+        <div class="error" id="professionError">please fill profession input</div>
         <br>
         <input type="text" class="card-maker-input" placeholder="ENTER PROFILE URL" id="userProfile">
+        <div class="error" id="profileError">please fill profile input</div>
         <br>
 
         <button class="card-maker-input-btn" onclick="cardMaker()">add</button>
